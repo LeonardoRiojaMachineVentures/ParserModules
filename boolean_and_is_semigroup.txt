@@ -1,0 +1,2 @@
+Boolean
+$ Set::semigroup(Boolean Add)

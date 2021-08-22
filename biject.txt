@@ -1,0 +1,16 @@
+enum Boolean
+	True
+	False
+set b Boolean
+$ Set::is_finite(b)
+enum W
+	A
+	B
+	C
+	D
+let x Boolean
+let y Boolean
+set s (x y)
+$ Set::is_finite(s)
+$ Nat::eq(Set::size(s) Set::size(W))
+let f Biojec(s W)	

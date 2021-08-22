@@ -1,0 +1,12 @@
+let x [Natural]
+let y [Natural]
+let z [Natural]
+
+$ Eq( x.append(y).append(z) x.append(y.append(z)) )
+
+type T
+let x [T]
+let y [T]
+let z [T]
+
+$ Eq( x.append(y).append(z) x.append(y.append(z)) )

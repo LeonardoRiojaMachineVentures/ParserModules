@@ -1,0 +1,13 @@
+let k S
+let a [&Nat k]
+struct Frac
+	num &Nat
+	den S
+
+impl &Nat
+	average(let k S let x [&Nat k]) (let &Nat)
+		mut s &Nat = Zero		
+		for i in x
+			s = s.add(i)
+		let r Frac(s k)
+			return(r)

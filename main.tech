@@ -1,0 +1,17 @@
+enum Boolean
+    T
+    F
+impl Boolean
+    and(read borrow x let Boolean read borrow y let Boolean) (write own let Boolean) #FunctionSignatureReciever #FunctionSignatureSender
+        match(read borrow x) #FunctionCall
+            Boolean::T
+                return(write own y) #ReturnCall
+            Boolean::F
+                return(write own let Boolean::F)
+
+let x Boolean
+let y Boolean
+let z Boolean = Boolean::and(read borrow x read borrow y) #FunctionCall
+
+let a Boolean
+$ Boolean::equiv(read borrow a read borrow Boolean::not(read borrow a))

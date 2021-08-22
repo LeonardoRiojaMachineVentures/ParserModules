@@ -1,0 +1,13 @@
+RDA for vitamin A as preformed vitamin A (micrograms of RAE)
+life stage, age, male (micrograms), female (microgram)
+infant, 0 - 6 months, 400, 400
+infant, 7 - 12 months, 500, 500
+children, 1 - 3 years, 300, 300
+children, 4 - 8 years, 400, 400
+children, 9 - 13 years, 600, 600
+adolescents, 14 - 18 years, 900, 700
+adults, 19 years or older, 900, 700
+pregnancy, 18 years or younger, - , 750
+pregnancy, 19 years or older, - , 770
+breast-feeding, 18 years or younger, - , 1200
+breast-feeding, 19 years or older, - , 1300

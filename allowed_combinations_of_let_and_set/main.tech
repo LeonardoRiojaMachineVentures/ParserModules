@@ -1,0 +1,27 @@
+enum CallClass
+    Let
+    Set
+impl CallClass
+    fn is_allowed(read borrow let x Option<CallClass> read borrow let y CallClass) (write own let Boolean)
+        match(read borrow x)
+            None
+                return(write own Boolean::True)
+            Some(a)
+                match(read borrow a)
+                    CallClass::Set
+                        return(write own Boolean::True)
+                    CallClass::Let
+                        match(read borrow y)
+                            CallClass::Let
+                                return(write own Boolean::False)
+                            CallClass::Set
+                                return(write own Boolean::True)
+
+$ CallClass::is_allowed(read own Option<ClassCall>::None read own CallClass::Let)
+$ CallClass::is_allowed(read own Option<ClassCall>::None read own CallClass::Set)
+$ CallClass::is_allowed(read own Option<ClassCall>::Some(read own ClassCall::Let) read own CallClass::Let)
+$ CallClass::is_allowed(read own Option<ClassCall>::Some(read own ClassCall::Let) read own CallClass::Set)
+$ CallClass::is_allowed(read own Option<ClassCall>::Some(read own ClassCall::Set) read own CallClass::Let)
+$ CallClass::is_allowed(read own Option<ClassCall>::Some(read own ClassCall::Set) read own CallClass::Set)
+
+}
